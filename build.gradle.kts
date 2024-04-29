@@ -7,6 +7,7 @@ plugins {
     id("com.google.devtools.ksp") version "1.9.23-1.0.19"
     id("com.github.johnrengelman.shadow") version "8.1.1"
     id("io.micronaut.application") version "4.3.6"
+    id("io.micronaut.test-resources") version "4.3.6"
     id("io.micronaut.aot") version "4.3.6"
     id("org.jooq.jooq-codegen-gradle") version "3.19.7"
 }
@@ -30,6 +31,7 @@ dependencies {
     implementation("io.micronaut.sql:micronaut-jooq")
     implementation("org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${kotlinVersion}")
+    implementation("io.micronaut.liquibase:micronaut-liquibase")
     compileOnly("io.micronaut:micronaut-http-client")
     runtimeOnly("ch.qos.logback:logback-classic")
     runtimeOnly("com.fasterxml.jackson.module:jackson-module-kotlin")
